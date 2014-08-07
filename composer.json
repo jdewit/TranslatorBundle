@@ -1,0 +1,19 @@
+{
+    "name": "avro/translator-bundle",
+    "description": "A symfony2 bundle that uses 3rd party translation apis to translate text",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Joris de Wit",
+            "email": "joris.w.dewit@gmail.com"
+        }
+    ],
+    "require": {
+
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-0": { "Avro\\TranslatorBundle": "" }
+    },
+    "target-dir": "Avro/TranslatorBundle"
+}

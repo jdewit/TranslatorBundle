@@ -1,0 +1,13 @@
+parameters:
+    azure_scope_url: http://api.microsofttranslator.com
+    azure_auth_url: https://datamarket.accesscontrol.windows.net/v2/OAuth2-13/
+    azure_translate_url: http://api.microsofttranslator.com/v2/Http.svc/Translate
+
+services:
+    avro_translator.translator:
+        class: Avro\TranslatorBundle\Translator\AzureTranslator
+        arguments: ['@avro_translator.azure.api_helper', '@session', '%azure_translate_url%']
+
+    avro_translator.azure.api_helper:
+        class: Avro\TranslatorBundle\Api\AzureApiHelper
+        arguments: ['%azure_scope_url%', '%azure_auth_url%', '%azure_client_id%', '%azure_client_secret%']
